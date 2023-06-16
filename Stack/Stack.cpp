@@ -14,6 +14,10 @@ public:
 	}
 
 	int push(int element) {
+		cout << "\nenter an element";
+		int element;
+		cin >> element;
+
 		if (top == 4) {//step 1
 			cout << "Number of data exceds the limit" << endl;
 			return 0;
@@ -65,12 +69,24 @@ int main() {
 		cin >> ch;
 		switch (ch) {
 		case '1': {
-			cout << "\nEnter an element: ";
-			int element;
-			cin >> element;
-			s.push(element);
+			s.push();
 			break;
 		}
-		
+		case '2':
+			if (s.empty()) {
+				cout << "\nStack is empty." << endl;
+				break;
+			}
+			s.pop();
+			break;
+		case '3':
+			s.display();
+			break;
+		case '4':
+			return 0;
+		default:
+			cout << "\n invlaid choice" << endl;
+			break;
+		}
 	}
 }
