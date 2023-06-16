@@ -13,14 +13,14 @@ public:
 		top = -1;
 	}
 
-	int push(int element) {
+	void push() {
 		cout << "\nenter an element";
 		int element;
 		cin >> element;
 
 		if (top == 4) {//step 1
 			cout << "Number of data exceds the limit" << endl;
-			return 0;
+			return;
 		}
 
 		top++;
@@ -28,7 +28,7 @@ public:
 		cout << endl;
 		cout << element << "ditambahkan(pushed)" << endl;
 
-		return element;
+		return;
 	}
 
 	void pop() {
