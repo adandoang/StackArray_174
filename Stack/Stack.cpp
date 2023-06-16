@@ -27,6 +27,7 @@ public:
 		stack_array[top] = element; //step 3
 		cout << endl;
 		cout << element << "ditambahkan(pushed)" << endl;
+		return;
 	}
 
 	void pop() {
@@ -83,7 +84,7 @@ int main() {
 		case '4':
 			return 0;
 		default:
-			cout << "\n invlaid choice" << endl;
+			cout << "\nInvlaid choice" << endl;
 			break;
 		}
 	}
